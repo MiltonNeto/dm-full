@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Device Manager - Teste Pulsus - Milton Neto</title>
+	<meta name="author" content="Milton Neto" />
+	<meta name="description" content="Teste de UX de Milton Neto - Pulsus[MDM Soluções]" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.tree-multiselect.css" />
+	<link rel="stylesheet" type="text/css" href="css/materialize.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</head>
+<body>
+	<div class="main-nav row z-depth-1">
+			<div class="col m2">
+				<h1 class="main-logo">
+					<img src="img/main-logo.svg" alt="Device Manager" class="responsive-img col m10">
+				</h1>
+			</div>
+
+			<div class="col m4 offset-m5">
+				<div class="searchbar">
+					<div class="row search-field">
+						<img src="img/magnifier.svg" class="responsive-img col m1 search-icon" />
+						<form class="col m10">
+							<input type="text" name="pesquisa" class="search-input" placeholder="Buscar grupo ou aparelho"/>
+						</form>
+						<button class="dropdown-btn col m1" >
+							<i class="fa fa-caret-down fa-2x" aria-hidden="true"></i>
+						</button>
+						
+					</div>
+				</div>
+
+				<div class="row" id="dropSearch">
+					<div class="dropdown-groups col m12">
+							<form>
+								<li class="col m6"><input name="group1" type="radio" id="test1" /><label>Grupo</label></li>
+							 <li class="col m6"><input name="group1" type="radio" id="test2" /><label>Aparelhos</label></li>
+							</form>						
+					</div>
+				</div>
+			</div>
+			
+			  <div class="col m1 btn-filtros float-right">
+		      	<span>Filtros</span><img src="img/btn-filter.svg" class="col m5 icon-filtros responsive-img" />
+		      </div>
+		</div>
+
+		<nav class="nav-filtros">
+			<div class="nav-wrapper">
+				<div class="row">
+					<ul class="col m12">
+						<li>
+							<a class="waves-effect waves-light btn modal-trigger" href="#modal1">
+								<i class="fa fa-mobile fa-2x" aria-hidden="true"></i>Por Aparelhos
+							</a>				
+						</li>
+					<li class="row">
+						<form>
+						<div class="input-field">
+							<i class="fa fa-calendar fa-2x prefix" aria-hidden="true"></i>
+							<input type="text" class="datepicker icon-prefix" />
+							<label>
+								Por data
+							</label>
+						</div>
+						</form>
+					</li>
+					<li class="input-field">
+						<i class="fa fa-clock-o fa-2x prefix" aria-hidden="true"></i>
+						<input type="text" class="timepicker icon-prefix">
+						<label>
+							Por hora
+						</label>
+					</li>
+					<li>
+						<div class="switch">
+							<span>Período de Inatividade:</span>
+						    <label>
+						      <input type="checkbox">
+						      <span class="lever"></span>
+						    </label>
+						  </div>
+					</li>
+					<li>
+						<form action="#">
+					    <p class="range-field">
+					      <input type="range" id="test5" min="2" max="24" />
+					    </p>
+					  </form>
+					</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div id="modal1" class="modal">
+			<div class="row">
+				<div class="modal-header col m12">
+					<h2>
+					Escolha os dispositivos
+					</h2>
+				</div>
+			</div>
+		    <div class="modal-content">
+		      <select id="test-select" multiple="multiple">
+		      <option value="dispositivo-1" data-section="Grupo 1">Dispositivo 1</option>
+		      <option value="dispositivo-1" data-section="Grupo 1">Dispositivo 2</option>
+		      <option value="dispositivo-1" data-section="Grupo 1">Dispositivo 3</option>
+		      <option value="dispositivo-1" data-section="Grupo 1">Dispositivo 4</option>
+		      <option value="dispositivo-1" data-section="Grupo 2">Dispositivo 5</option>
+		      <option value="dispositivo-1" data-section="Grupo 2">Dispositivo 6</option>
+		      <option value="dispositivo-1" data-section="Grupo 2">Dispositivo 7</option>
+		      <option value="dispositivo-1" data-section="Grupo 3">Dispositivo 8</option>
+		      <option value="dispositivo-1" data-section="Grupo 3">Dispositivo 9</option>
+		      <option value="dispositivo-1" data-section="Grupo 3">Dispositivo 10</option>
+		      <option value="dispositivo-1" data-section="Grupo 3">Dispositivo 11</option>
+		      <option value="dispositivo-1" data-section="Grupo 4">Dispositivo 12</option>
+		      <option value="dispositivo-1" data-section="Grupo 4">Dispositivo 13</option>
+		      <option value="dispositivo-1" data-section="Grupo 4">Dispositivo 14</option>
+		      <option value="dispositivo-1" data-section="Grupo 4">Dispositivo 15</option>
+		    </select>
+		    </div>
+		    <div class="modal-footer">
+		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+		    </div>
+		  </div>	
+	</div>
+	<div class="map">
+		<img src="img/map-1.png" class="responsive-img mapa" />
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/modernizr-custom.js"></script>
+<script src="vendor/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.tree-multiselect.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    $('#modal1').modal();
+		  });
+	</script>
+
+	<script type="text/javascript">
+		$('.datepicker').pickadate({
+		  labelMonthNext: 'Mês seguinte',
+		  labelMonthPrev: 'Mês anterior',
+		  labelMonthSelect: 'Escolha o mês',
+		  labelYearSelect: 'Escolha o ano',
+		  monthsFull: [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Septembro', 'Outubro', 'Novembro', 'Dezembro' ],
+		  monthsShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
+		  weekdaysFull: [ 'Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado' ],
+		  weekdaysShort: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
+		  weekdaysLetter: [ 'D', 'S', 'T', 'Q', 'Q', 'S', 'S' ],
+		  today: 'Hoje',
+		  clear: 'Limpar',
+		  close: 'OK'
+		});
+	</script>
+	<script type="text/javascript">
+		$('.timepicker').pickatime({
+		    default: 'Agora', // Set default time: 'now', '1:30AM', '16:30'
+		    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+		    twelvehour: false, // Use AM/PM or 24-hour format
+		    donetext: 'OK', // text for done-button
+		    cleartext: 'Limpar', // text for clear-button
+		    canceltext: 'Cancelar', // Text for cancel-button
+		    autoclose: false, // automatic close timepicker
+		    ampmclickable: true, // make AM PM clickable
+		    aftershow: function(){} //Function for after opening timepicker
+		  });
+	</script>
+	
+	<script type="text/javascript">
+      var tree1 = $("#test-select").treeMultiselect({ enableSelectAll: true, sortable: true });
+      var tree2 = $("#test-select-2").treeMultiselect({
+        searchable: true
+      });
+      var tree3 = $("#test-select-3").treeMultiselect({
+        allowBatchSelection: false,
+        enableSelectAll: true,
+        searchable: true,
+        sortable: true,
+        startCollapsed: true
+      });
+    </script>
+
+    <script type="text/javascript">
+    	$( ".dropdown-btn" ).click(function() {
+		  $( "#dropSearch" ).slideToggle('500' );
+		});
+    </script>
+    <script type="text/javascript">
+    	$( ".btn-filtros" ).click(function() {
+		  $( ".nav-filtros" ).slideToggle('fast');
+		});
+    </script>
+</html>
